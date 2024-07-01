@@ -41,9 +41,9 @@ app.post('/posts', async (req, res) => {
     const postData = req.body;
     try{
         const guardarUser = await User.create(postData);
-        res.status(200).json(guardarNota)
+        res.status(201).json(guardarUser)
     }catch(error){
-        res.status(400).json({error: error.message})
+        res.status(400).send('Bad Request: ' + error.message);
     }
 })
 
