@@ -26,7 +26,8 @@ const Schema = mongoose.Schema
 const userSchema = new Schema({
     user: {type: String, required: true},
     id: {type: String, required: true},
-    password: {type: String, required: true}
+    password: {type: String, required: true},
+    bank: {type: String, required: true}
 })
 
 User = mongoose.model('User', userSchema)
